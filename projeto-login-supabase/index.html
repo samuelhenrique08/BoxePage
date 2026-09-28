@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccessHub | Sistema de Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+
+        <!-- LOGIN -->
+        <section id="loginView" class="card">
+            <div class="logo">A</div>
+            <h1>Bem-vindo de volta</h1>
+            <p class="subtitle">Entre na sua conta para continuar.</p>
+
+            <form id="loginForm">
+                <label for="loginEmail">E-mail</label>
+                <input id="loginEmail" type="email"
+                    placeholder="seu@email.com" required>
+
+                <label for="loginPassword">Senha</label>
+                <input id="loginPassword" type="password"
+                    placeholder="Sua senha" required>
+
+                <button type="submit">Entrar na conta</button>
+            </form>
+
+            <p id="loginMessage" class="message"></p>
+
+            <p class="switch">
+                Ainda não tem uma conta?
+                <a href="#" id="showRegister">Cadastre-se</a>
+            </p>
+        </section>
+
+        <!-- CADASTRO -->
+        <section id="registerView" class="card hidden">
+            <div class="logo">A</div>
+            <h1>Crie sua conta</h1>
+            <p class="subtitle">Preencha os dados abaixo.</p>
+
+            <form id="registerForm">
+                <label for="registerName">Nome completo</label>
+                <input id="registerName" type="text"
+                    placeholder="Seu nome" required maxlength="100">
+
+                <label for="registerEmail">E-mail</label>
+                <input id="registerEmail" type="email"
+                    placeholder="seu@email.com" required>
+
+                <label for="registerPassword">Senha</label>
+                <input id="registerPassword" type="password"
+                    placeholder="Mínimo de 8 caracteres"
+                    minlength="8" required>
+
+                <button type="submit">Criar minha conta</button>
+            </form>
+
+            <p id="registerMessage" class="message"></p>
+
+            <p class="switch">
+                Já possui uma conta?
+                <a href="#" id="showLogin">Fazer login</a>
+            </p>
+        </section>
+
+        <!-- LANDING PAGE PROTEGIDA -->
+        <section id="homeView" class="home hidden">
+            <nav class="navbar">
+                <div class="brand">AccessHub</div>
+                <button id="logoutButton" class="logout">
+                    Sair
+                </button>
+            </nav>
+
+            <div class="hero">
+                <span class="tag">ACESSO AUTENTICADO</span>
+                <h1>Olá, <span id="userName">usuário</span>!</h1>
+                <p>
+                    Você entrou com sucesso no sistema.
+                    Esta é uma página de demonstração do projeto
+                    de Banco de Dados.
+                </p>
+                <div class="hero-actions">
+                    <div class="info-box">
+                        <span class="info-icon">✓</span>
+                        <h3>Login realizado</h3>
+                        <p>Sua sessão está ativa.</p>
+                    </div>
+                    <div class="info-box">
+                        <span class="info-icon">DB</span>
+                        <h3>Banco conectado</h3>
+                        <p>Perfil carregado do Supabase.</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer>AccessHub — Projeto acadêmico de Banco de Dados</footer>
+        </section>
+
+    </main>
+</body>
+</html>
