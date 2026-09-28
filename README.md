@@ -33,10 +33,16 @@ O projeto permite que usuários criem uma conta, façam login com suas credencia
 ## 📁 Estrutura do projeto
 
 ```text
-projeto-login-supabase/
+BoxePage/
+│
+├── assets/
+│   ├── js
+│   │   └── script.js   
+│   └── css
+│       └── style.css
+│
 ├── index.html
-├── style.css
-├── script.js
+├── .gitignore
 └── README.md
 ```
 
